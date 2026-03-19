@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Gift - madeforeangel</title>
+    <style>
+        /* Mengatur latar belakang halaman */
+        body {
+            background-color: #2a2f32; /* Warna gelap mirip background chat */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Kotak Kartu Utama */
+        .card {
+            background-color: #0b141a; /* Warna hitam pekat */
+            width: 320px;
+            height: 320px;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 2px solid #1e2b33;
+        }
+
+        /* Efek Pita Merah di Kiri Atas */
+        .ribbon {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, transparent 50%, #e60000 50%);
+            border-bottom-right-radius: 100%;
+            z-index: 10;
+        }
+
+        /* Hiasan Pita Silang */
+        .ribbon::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 10px;
+            background-color: #ff3333;
+            transform: rotate(-45deg);
+        }
+
+        /* Bentuk Hati (Bisa diganti dengan tag <img> jika punya gambar QR Code) */
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            margin-top: 10px;
+            animation: heartbeat 1.5s infinite; /* Animasi detak jantung */
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            border-radius: 50px 50px 0 0;
+            background-color: #e60000; /* Warna merah hati */
+        }
+
+        .heart::before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        /* Animasi Detak Hati */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            20% { transform: scale(1.1); }
+            40% { transform: scale(1); }
+            60% { transform: scale(1.1); }
+            80% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Area Teks */
+        .text-container {
+            margin-top: 40px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .gift-signature {
+            color: #ffffff;
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 32px;
+            margin: 0;
+            transform: rotate(-5deg); /* Sedikit miring agar seperti tulisan tangan */
+        }
+
+        /* Teks yang kamu minta ganti */
+        .target-name {
+            color: #b3b3b3;
+            font-size: 14px;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: lowercase;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="ribbon"></div>
+
+        <div class="heart"></div>
+
+        <div class="text-container">
+            <p class="gift-signature">Gift</p>
+            
+            <p class="target-name">madeforeangel</p>
+        </div>
+    </div>
+
+</body>
+</html>
